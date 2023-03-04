@@ -4,3 +4,5 @@ coverage
 .eslintcache
 pnpm-lock.yaml
 .turbo
+.studio
+personal-blog-app

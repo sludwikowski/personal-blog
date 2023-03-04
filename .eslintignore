@@ -6,3 +6,5 @@ lint-staged.config.js
 vite.config.ts
 .turbo
 .src
+.studio
+personal-blog-app
