@@ -1,0 +1,8 @@
+node_modules
+dist
+coverage
+.eslintcache
+lint-staged.config.js
+vite.config.ts
+.turbo
+.src
