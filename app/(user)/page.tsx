@@ -24,11 +24,15 @@ export default async function Home() {
           </div>
         }
       >
-        <Banner />
         <PreviewBlogList query={query} />
       </PreviewSuspense>
     )
   }
   const posts = await client.fetch(query)
-  return <BlogList posts={posts} />
+  return (
+    <div>
+      <Banner />
+      <BlogList posts={posts} />
+    </div>
+  )
 }
