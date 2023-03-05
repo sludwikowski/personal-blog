@@ -3,7 +3,7 @@ import SquigglyLines from './SquigglyLines'
 
 function Banner() {
   return (
-    <div className="mt-20 flex w-full flex-1 flex-col items-center justify-center px-4 pt-8 text-center sm:mt-20">
+    <div className="mt-20 flex w-full flex-1 flex-col items-center px-4 pt-8 text-center sm:mt-20">
       <h1 className="font-display mx-auto max-w-4xl text-5xl font-bold tracking-normal text-gray-300 sm:text-7xl">
         Cześć, ja jestem{' '}
         <Link href="/">
