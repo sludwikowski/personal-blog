@@ -14,6 +14,7 @@ const query = groq`
   } | order(_createdAt desc)
 `
 
+export const revalidate = 30
 export default async function Home() {
   if (previewData()) {
     return (

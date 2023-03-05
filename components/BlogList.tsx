@@ -62,7 +62,7 @@ function BlogList({ posts }: Props) {
                 <p className={'text-gray-500 line-clamp-2'}>{post.description}</p>
               </div>
               <p className={'mt-5 flex items-center font-bold group-hover:underline'}>
-                Read Post
+                Czytaj więcej
                 <ArrowUpRightIcon className={'ml-2 h-4 w-4'} />
               </p>
             </div>
