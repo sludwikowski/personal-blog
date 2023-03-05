@@ -45,7 +45,7 @@ interface Block {
   _key: string
   _type: 'block'
   children: Span[]
-  markDefs: never[]
+  markDefs: any[]
   style: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'blockquote'
 }
 
@@ -61,7 +61,7 @@ interface Category extends Base {
   title: string
 }
 
-interface MainImage {
+interface mainImage {
   _type: 'image'
   asset: Reference
 }

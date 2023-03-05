@@ -2,6 +2,7 @@
 > personal-blog@0.1.0 build /home/sludwikowski/Repositories/personal-blog
 > next build
 
+info  - Loaded env from /home/sludwikowski/Repositories/personal-blog/.env.local
 warn  - You have enabled experimental feature (appDir) in next.config.js.
 warn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
 info  - Thank you for testing `appDir` please leave your feedback at https://nextjs.link/app-feedback
@@ -11,40 +12,13 @@ info  - Compiled successfully
 info  - Linting and checking validity of types...
 warn  - The Next.js plugin was not detected in your ESLint configuration. See https://nextjs.org/docs/basic-features/eslint#migrating-existing-config
 
-./app/api/hello/route.ts
-1:1  Warning: exported declaration 'GET' not used within other modules  import/no-unused-modules
-1:27  Warning: 'request' is defined but never used.  @typescript-eslint/no-unused-vars
+Failed to compile.
 
-./app/layout.tsx
-3:1  Warning: exported declaration 'metadata' not used within other modules  import/no-unused-modules
-8:1  Warning: exported declaration 'default' not used within other modules  import/no-unused-modules
+./components/BlogList.tsx
+6:3  Error: Do not use "@ts-ignore" because it alters compilation errors.  @typescript-eslint/ban-ts-comment
 
-./app/page.tsx
-7:1  Warning: exported declaration 'default' not used within other modules  import/no-unused-modules
+./lib/urlFor.ts
+6:25  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
 
 info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
-info  - Collecting page data...
-info  - Generating static pages (0/4)
-info  - Generating static pages (1/4)
-info  - Generating static pages (2/4)
-info  - Generating static pages (3/4)
-info  - Generating static pages (4/4)
-info  - Finalizing page optimization...
-
-Route (app)                                Size     First Load JS
-┌ ○ /                                      4.84 kB        72.6 kB
-└ ○ /api/hello                             0 B                0 B
-+ First Load JS shared by all              67.8 kB
-  ├ chunks/38-dbfc592d30e43583.js          65.5 kB
-  ├ chunks/main-app-fc4b3e7345d1d8fa.js    205 B
-  └ chunks/webpack-bf74531ebc98c99a.js     2.1 kB
-
-Route (pages)                              Size     First Load JS
-─ ○ /404                                   179 B          90.8 kB
-+ First Load JS shared by all              90.7 kB
-  ├ chunks/main-a37dfe6655769d35.js        88.4 kB
-  ├ chunks/pages/_app-71486daba6d18690.js  192 B
-  └ chunks/webpack-bf74531ebc98c99a.js     2.1 kB
-
-○  (Static)  automatically rendered as static HTML (uses no initial props)
-
+ ELIFECYCLE  Command failed with exit code 1.

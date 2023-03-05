@@ -4,6 +4,7 @@ import { client } from '@/lib/sanity.client'
 import PreviewSuspense from '@/components/PreviewSuspense'
 import PreviewBlogList from '@/components/PreviewBlogList'
 import BlogList from '@/components/BlogList'
+import Banner from '@/components/Banner'
 
 const query = groq`
   *[_type == 'post'] {
@@ -23,6 +24,7 @@ export default async function Home() {
           </div>
         }
       >
+        <Banner />
         <PreviewBlogList query={query} />
       </PreviewSuspense>
     )
