@@ -34,30 +34,29 @@ function BlogList({ posts }: Props) {
                   }
                 >
                   <div>
-                    <p className={'font-bold'}>{post.title}</p>
-                    <p>
-                      {new Date(post._createdAt).toLocaleDateString('pl-PL', {
-                        day: 'numeric',
-                        month: 'long',
-                        year: 'numeric',
-                      })}
-                    </p>
-                  </div>
-                  <div className={'flex flex-col items-center gap-y-2 md:flex-row md:gap-x-2'}>
-                    {post.categories.map((category: any) => (
-                      <div
-                        key={category.title}
-                        className={'rounded-full bg-[#2563eb] px-3 py-2 text-center text-sm font-semibold'}
-                      >
-                        <p>{category.title}</p>
-                      </div>
-                    ))}
+                    <p className={'text-xl font-bold uppercase'}>{post.title}</p>
+                    <div className="flex items-center space-x-3 font-light italic text-gray-300 dark:text-gray-400">
+                      <span className="text-sm">{post.author.name}</span>
+                      <p className={'justify-between'}>
+                        {new Date(post._createdAt).toLocaleDateString('pl-PL', {
+                          day: 'numeric',
+                          month: 'long',
+                          year: 'numeric',
+                        })}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
               <div className={'mt-5 flex-1'}>
-                <p className={'text-lg font-bold underline'}>{post.title}</p>
-                <p className={'text-gray-500 line-clamp-2'}>{post.description}</p>
+                <p className={'text-white line-clamp-2'}>{post.description}</p>
+              </div>
+              <div className={'flex flex-col items-center gap-y-1 md:flex-row md:gap-x-2'}>
+                {post.categories.map((category: any) => (
+                  <div key={category.title} className={'line-clamp-3" mt-1 text-sm text-[#2563eb]'}>
+                    <p className={'uppercase'}>{category.title}</p>
+                  </div>
+                ))}
               </div>
               <p className={'mt-5 flex items-center font-bold group-hover:underline'}>
                 Czytaj więcej
