@@ -1,14 +1,13 @@
+/* eslint-disable */
 import Image from 'next/image'
 import { ArrowUpRightIcon } from '@heroicons/react/24/solid'
 
 import urlFor from '@/lib/urlFor'
 import ClientSideRoute from '@/components/ClientSideRoute'
 
-type Props = {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  posts: Post[]
-}
+import { Post } from '@/typings'
+
+type Props = { posts: Post[] }
 
 function BlogList({ posts }: Props) {
   return (
@@ -45,7 +44,6 @@ function BlogList({ posts }: Props) {
                     </p>
                   </div>
                   <div className={'flex flex-col items-center gap-y-2 md:flex-row md:gap-x-2'}>
-                    {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                     {post.categories.map((category: any) => (
                       <div
                         key={category.title}

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Image from 'next/image'
 import Link from 'next/link'
 import urlFor from '@/lib/urlFor'
@@ -13,31 +14,51 @@ export const RichTextComponents = {
     },
   },
   list: {
-    bullet: ({ children }: any) => <ul className={'ml-10 list-disc space-y-2 py-2'}>{children}</ul>,
+    bullet: ({ children }: any) => (
+      <div className={'m-auto max-w-md'}>
+        {' '}
+        <ul className={'list-disc space-y-2 py-5 italic text-gray-300 marker:text-yellow-400'}>{children}</ul>
+      </div>
+    ),
     number: ({ children }: any) => (
-      <ol className={'ml-10 list-decimal space-y-2 py-5 italic text-gray-300'}>{children}</ol>
+      <div className={'m-auto max-w-md'}>
+        <ol className={'list-decimal space-y-2 py-5 italic text-gray-300 marker:font-bold marker:text-orange-700'}>
+          {children}
+        </ol>
+      </div>
     ),
   },
   block: {
-    normal: ({ children }: any) => <div className={'mt-4 mb-1 text-gray-200'}>{children}</div>,
-    h1: ({ children }: any) => <h1 className={'py-10 text-5xl font-bold'}>{children}</h1>,
-    h2: ({ children }: any) => <h2 className={'py-10 text-4xl font-bold'}>{children}</h2>,
-    h3: ({ children }: any) => <h3 className={'py-10 text-3xl font-bold'}>{children}</h3>,
-    h4: ({ children }: any) => <h4 className={'py-10 text-2xl font-bold'}>{children}</h4>,
+    normal: ({ children }: any) => <div className={'mt-4 mb-1 max-w-4xl text-gray-200'}>{children}</div>,
+    h1: ({ children }: any) => <h1 className={'py-5 text-5xl font-bold tracking-widest'}>{children}</h1>,
+    h2: ({ children }: any) => <h2 className={'py-5 text-4xl font-bold'}>{children}</h2>,
+    h3: ({ children }: any) => <h3 className={'py-5 text-3xl font-bold'}>{children}</h3>,
+    h4: ({ children }: any) => <h4 className={'py-5 text-2xl font-bold'}>{children}</h4>,
     blockquote: ({ children }: any) => (
       <blockquote
-        className={'my-5 border-l-4 border-l-[#2563eb] py-5 pl-5 text-center text-sm font-light italic text-gray-400'}
+        className={
+          'my-5 border-l-4 border-b-4 border-l-[#2563eb] border-b-[#2563eb] py-5 pl-5 text-center text-sm font-light italic text-gray-400'
+        }
       >
         {children}
       </blockquote>
     ),
-    code: ({ children }: any) => <code className={'border-4 border-[#2563eb]'}>{children}</code>,
   },
   marks: {
+    strong: ({ children }: any) => <strong className={'font-bold text-[#2563eb]'}>{children}</strong>,
+    code: ({ children }: any) => (
+      <div className={'m-auto max-w-md rounded-tl-lg rounded-br-lg border-2 border-[#2563eb] bg-gray-300'}>
+        <code className={'ml-2 text-center tracking-tight text-black'}>{children}</code>
+      </div>
+    ),
     link: ({ children, value }: any) => {
       const rel = !value.href.startsWith('/') ? 'noopener noreferrer' : undefined
       return (
-        <Link href={value.href} rel={rel} className={'font-bold underline decoration-[#2563eb] hover:decoration-black'}>
+        <Link
+          href={value.href}
+          rel={rel}
+          className={'font-bold underline decoration-[#2563eb] hover:text-[#2563eb] hover:decoration-white'}
+        >
           {children}
         </Link>
       )

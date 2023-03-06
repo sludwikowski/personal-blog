@@ -22,8 +22,6 @@ export async function generateStaticParams() {
   const query = groq`*[_type=='post'] 
   { slug }`
 
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
   const slugs: Post[] = await client.fetch(query)
   const slugRoutes = slugs.map((slug) => slug.slug.current)
 
