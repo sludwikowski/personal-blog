@@ -5,7 +5,7 @@ import SquigglyLines from '@/components/SquigglyLines'
 export default function Header() {
   return (
     <header className="xs:flex-row mt-4 flex w-full flex-col items-center justify-between gap-2 border-b border-gray-600 px-2 pb-5 sm:px-4 lg:flex-row">
-      <Link href="/" className="flex space-x-2">
+      <Link href="/" className="mb-4 flex space-x-2 sm:mb-0">
         <Image alt="header text" src="/road.png" className="h-9 w-9 sm:h-8 sm:w-8" width={24} height={24} />
         <span className={'relative'}>
           <SquigglyLines />

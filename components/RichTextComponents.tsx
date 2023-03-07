@@ -17,12 +17,18 @@ export const RichTextComponents = {
     bullet: ({ children }: any) => (
       <div className={'m-auto max-w-md'}>
         {' '}
-        <ul className={'list-disc space-y-2 py-5 italic text-gray-300 marker:text-yellow-400'}>{children}</ul>
+        <ul className={'list-outside list-disc space-y-2 py-5 italic text-gray-300 marker:text-yellow-400'}>
+          {children}
+        </ul>
       </div>
     ),
     number: ({ children }: any) => (
       <div className={'m-auto max-w-md'}>
-        <ol className={'list-decimal space-y-2 py-5 italic text-gray-300 marker:font-bold marker:text-orange-700'}>
+        <ol
+          className={
+            'list-outside list-decimal space-y-2 rounded-2xl py-5 italic text-gray-300 marker:font-bold marker:text-orange-700'
+          }
+        >
           {children}
         </ol>
       </div>
@@ -37,7 +43,7 @@ export const RichTextComponents = {
     blockquote: ({ children }: any) => (
       <blockquote
         className={
-          'my-5 border-l-4 border-b-4 border-l-[#2563eb] border-b-[#2563eb] py-5 pl-5 text-center text-sm font-light italic text-gray-400'
+          'my-5 border-l-2 border-b-2 border-l-[#2563eb] border-b-[#2563eb] py-5	 pl-5 text-center text-sm font-light italic tracking-widest text-gray-400'
         }
       >
         {children}

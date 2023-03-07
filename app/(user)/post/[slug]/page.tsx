@@ -42,21 +42,21 @@ async function Post({ params: { slug } }: Props) {
   const post: Post = await client.fetch(query, { slug })
 
   return (
-    <article className={'px-10 pt-16 pb-28'}>
+    <article className={'px-5 pt-16 pb-28'}>
       <section className={'space-y-2'}>
-        <div className={' relative m-auto flex flex-col justify-between md:min-h-[20rem] md:flex-row'}>
-          <div className={'absolute top-0 h-full w-full p-10 opacity-40'}>
+        <div className={' relative m-auto flex flex-col justify-between rounded-2xl md:min-h-[20rem] md:flex-row '}>
+          <div className={'absolute top-0 h-full w-full rounded-2xl p-10 opacity-30 '}>
             <Image
-              className={'mx-auto object-cover object-center'}
+              className={'mx-auto rounded-2xl object-cover object-center '}
               src={urlFor(post.mainImage).url()}
               alt={post.author.name}
               fill
             />
           </div>
           <section className={'w-full p-5 md:p-16'}>
-            <div className={'flex flex-col justify-between gap-y-5 md:flex-row'}>
+            <div className={'flex flex-col justify-between gap-y-5 font-bold md:flex-row'}>
               <div>
-                <h1 className={'text-4xl font-extrabold'}>{post.title}</h1>
+                <h1 className={'text-4xl font-bold'}>{post.title}</h1>
                 <p>
                   {' '}
                   {new Date(post._createdAt).toLocaleDateString('pl-PL', {
@@ -95,12 +95,32 @@ async function Post({ params: { slug } }: Props) {
           </p>
         ))}
       </div>
+      <div className="mt-3 rounded-2xl bg-[#2d3038] px-5 py-5 text-gray-400">
+        <div className="flex flex-wrap items-center justify-center sm:flex-nowrap sm:space-x-6">
+          <div className="relative mt-1 h-24 w-24 flex-shrink-0 ">
+            <Image
+              className={'rounded-full'}
+              src={urlFor(post.author.image).url()}
+              alt={post.author.name}
+              height={100}
+              width={100}
+            />
+          </div>
+          <div>
+            <div className="mb-3">
+              <h4 className="mt-2 text-lg font-medium text-gray-300"> About {post.author.name}</h4>
+            </div>
+            <div className={''}>
+              {' '}
+              <PortableText value={post.author.bio} />
+            </div>
+          </div>
+        </div>
+      </div>
       <div>
         <Link
           href={'/'}
-          className={
-            'x-5 bg-brand-secondary/20 mt-7 mb-7 flex justify-center rounded-full py-2 text-sm text-blue-600 dark:text-blue-500 '
-          }
+          className={'x-5 bg-brand-secondary/20 mt-7 mb-7 flex justify-center rounded-full py-2 text-sm text-blue-600 '}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
