@@ -43,9 +43,9 @@ async function Post({ params: { slug } }: Props) {
 
   return (
     <article className={'px-10 pt-16 pb-28'}>
-      <section className={'space-y-2 border border-[#2563eb] '}>
-        <div className={'min-h-56 relative flex flex-col justify-between md:flex-row'}>
-          <div className={'absolute top-0 h-full w-full p-10 opacity-10 blur-sm'}>
+      <section className={'space-y-2'}>
+        <div className={' relative m-auto flex flex-col justify-between md:min-h-[20rem] md:flex-row'}>
+          <div className={'absolute top-0 h-full w-full p-10 opacity-40'}>
             <Image
               className={'mx-auto object-cover object-center'}
               src={urlFor(post.mainImage).url()}
@@ -53,7 +53,7 @@ async function Post({ params: { slug } }: Props) {
               fill
             />
           </div>
-          <section className={'w-full bg-[#2563eb] p-5'}>
+          <section className={'w-full p-5 md:p-16'}>
             <div className={'flex flex-col justify-between gap-y-5 md:flex-row'}>
               <div>
                 <h1 className={'text-4xl font-extrabold'}>{post.title}</h1>
@@ -76,20 +76,11 @@ async function Post({ params: { slug } }: Props) {
                 />
                 <div className={'w-64'}>
                   <h3 className={'text-lg font-bold'}>{post.author.name}</h3>
-                  <div>text</div>
                 </div>
               </div>
             </div>
             <div>
-              <h2 className={'pt-10 italic'}>{post.description}</h2>
-              <div className={'mt-auto flex items-center justify-end space-x-2'}>
-                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                {post.categories.map((category: any) => (
-                  <p key={category._id} className={'mt-4 rounded-full bg-gray-800 px-3 py-1 text-sm font-semibold'}>
-                    {category.title}
-                  </p>
-                ))}
-              </div>
+              <h2 className={'pt-12 text-center italic'}>{post.description}</h2>
             </div>
           </section>
         </div>
@@ -97,8 +88,20 @@ async function Post({ params: { slug } }: Props) {
       <div className={'m-auto max-w-4xl py-8'}>
         <PortableText value={post.body} components={RichTextComponents} />
       </div>
+      <div className="flex gap-3 text-center">
+        {post.categories.map((category: any) => (
+          <p key={category._id} className={'mt-4 text-sm font-semibold uppercase text-[#2563eb]'}>
+            {category.title}
+          </p>
+        ))}
+      </div>
       <div>
-        <Link href={'/'} className={' mt-5 flex items-center font-bold hover:underline'}>
+        <Link
+          href={'/'}
+          className={
+            'x-5 bg-brand-secondary/20 mt-7 mb-7 flex justify-center rounded-full py-2 text-sm text-blue-600 dark:text-blue-500 '
+          }
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
