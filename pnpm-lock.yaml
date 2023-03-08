@@ -39,6 +39,7 @@ specifiers:
   prettier: 2.8.2
   prettier-plugin-tailwindcss: ^0.2.3
   prism-react-renderer: ^1.2.1
+  prop-types: ^15.8.1
   react: 18.2.0
   react-dom: 18.2.0
   react-portable-text: ^0.6.0
@@ -71,6 +72,7 @@ dependencies:
   next-sanity: 4.1.5_p42jsjdc7w62tadjx2gu3w7hwy
   next-themes: 0.2.1_nvzgbose6yf6w7ijjprgspqefi
   prism-react-renderer: 1.3.5_react@18.2.0
+  prop-types: 15.8.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-portable-text: 0.6.0_react@18.2.0

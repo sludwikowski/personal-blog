@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { groq } from 'next-sanity'
 import Image from 'next/image'
 import Link from 'next/link'
