@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Author from '@/schemas/author'
 import { Slug } from 'sanity'
 
@@ -39,6 +40,14 @@ interface Reference {
 interface Slug {
   _type: 'slug'
   current: string
+}
+
+interface CodeBlock {
+  _type: 'code'
+  code?: string
+  language?: string
+  filename?: string
+  highlightedLines?: number[]
 }
 
 interface Block {

@@ -1,7 +1,10 @@
 /* eslint-disable */
 import Image from 'next/image'
 import Link from 'next/link'
+
 import urlFor from '@/lib/urlFor'
+
+import TypeCode from './PortableText/TypeCode'
 
 export const RichTextComponents = {
   types: {
@@ -12,6 +15,7 @@ export const RichTextComponents = {
         </div>
       )
     },
+    code: TypeCode,
   },
   list: {
     bullet: ({ children }: any) => (
@@ -50,13 +54,9 @@ export const RichTextComponents = {
       </blockquote>
     ),
   },
+  code: {},
   marks: {
     strong: ({ children }: any) => <strong className={'font-bold text-[#2563eb]'}>{children}</strong>,
-    code: ({ children }: any) => (
-      <div className={'m-auto max-w-md rounded-tl-lg rounded-br-lg border-2 border-[#2563eb] bg-gray-300'}>
-        <code className={'ml-2 text-center tracking-tight text-black'}>{children}</code>
-      </div>
-    ),
     link: ({ children, value }: any) => {
       const rel = !value.href.startsWith('/') ? 'noopener noreferrer' : undefined
       return (

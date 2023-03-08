@@ -1,6 +1,7 @@
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { visionTool } from '@sanity/vision'
+import { codeInput } from '@sanity/code-input'
 import { schemaTypes } from './schemas'
 import { myTheme } from './theme'
 import { getDefaultDocumentNode } from './structure'
@@ -21,6 +22,7 @@ export default defineConfig({
       defaultDocumentNode: getDefaultDocumentNode,
     }),
     visionTool(),
+    codeInput(),
   ],
   schema: {
     types: schemaTypes,

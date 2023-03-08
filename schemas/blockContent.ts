@@ -1,4 +1,7 @@
+/* eslint-disable */
 import { defineType, defineArrayMember } from 'sanity'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 /**
  * This is the schema definition for the rich text fields used for
@@ -10,6 +13,31 @@ import { defineType, defineArrayMember } from 'sanity'
  *    type: 'blockContent'
  *  }
  */
+const CodeRender = (props: { children: any; style?: 'span' | undefined }) => {
+  const { children, style: element = 'span' } = props
+
+  return React.createElement(
+    element,
+    {
+      style: {
+        display: `block`,
+        backgroundColor: `#efefef`,
+        padding: `1rem`,
+        // @ts-ignore
+        overflowX: element === `pre` ? `scroll` : `auto`,
+        fontFamily:
+          'JetBrains Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace',
+      },
+    },
+    children ?? element
+  )
+}
+
+CodeRender.propTypes = {
+  children: PropTypes.string.isRequired,
+  style: PropTypes.string.isRequired,
+}
+
 export default defineType({
   title: 'Block Content',
   name: 'blockContent',
@@ -29,6 +57,18 @@ export default defineType({
         { title: 'H3', value: 'h3' },
         { title: 'H4', value: 'h4' },
         { title: 'Quote', value: 'blockquote' },
+        {
+          title: 'Pre',
+          value: 'pre',
+          // @ts-ignore
+          blockEditor: { render: CodeRender },
+        },
+        {
+          title: 'Code',
+          value: 'code',
+          // @ts-ignore
+          blockEditor: { render: CodeRender },
+        },
       ],
       lists: [
         { title: 'Bullet', value: 'bullet' },
@@ -41,7 +81,6 @@ export default defineType({
         decorators: [
           { title: 'Strong', value: 'strong' },
           { title: 'Emphasis', value: 'em' },
-          { title: 'Code', value: 'code' },
           { title: 'Highlight', value: 'highlight' },
           { title: 'Underline', value: 'underline' },
           { title: 'Strike', value: 'strike-through' },
@@ -85,6 +124,10 @@ export default defineType({
     defineArrayMember({
       type: 'image',
       options: { hotspot: true },
+    }),
+    defineArrayMember({
+      type: 'code',
+      title: 'Code block',
     }),
   ],
 })
