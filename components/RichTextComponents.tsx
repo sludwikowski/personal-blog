@@ -27,7 +27,7 @@ export const RichTextComponents = {
       </div>
     ),
     number: ({ children }: any) => (
-      <div className={'m-auto max-w-md'}>
+      <div className={'my-auto ml-14 max-w-md'}>
         <ol
           className={
             'list-outside list-decimal space-y-2 rounded-2xl py-5 italic text-gray-300 marker:font-bold marker:text-orange-700'

@@ -2,9 +2,3 @@
 > personal-blog@0.1.0 lint /home/sludwikowski/Repositories/personal-blog
 > eslint app --ext .js,.jsx,.ts,.tsx
 
-
-/home/sludwikowski/Repositories/personal-blog/app/(user)/post/[slug]/page.tsx
-  85:49  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
-
-✖ 1 problem (0 errors, 1 warning)
-

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { groq } from 'next-sanity'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -43,7 +42,7 @@ async function Post({ params: { slug } }: Props) {
   const post: Post = await client.fetch(query, { slug })
 
   return (
-    <article className={'justify-center px-5 pt-16 pb-28'}>
+    <article className={'px-2 pt-16 pb-28'}>
       <section className={'space-y-2'}>
         <div className={' relative m-auto flex flex-col justify-between rounded-2xl md:min-h-[20rem] md:flex-row '}>
           <div className={'absolute top-0 h-full w-full rounded-2xl p-10 opacity-30 '}>
@@ -82,19 +81,19 @@ async function Post({ params: { slug } }: Props) {
             </div>
             <div>
               <h2 className={'pt-12 text-center italic'}>{post.description}</h2>
-              <div className="sm:nowrap flex flex-wrap gap-3 text-center">
-                {post.categories.map((category: any) => (
-                  <p key={category._id} className={'mt-4 text-sm font-semibold uppercase text-[#2563eb]'}>
-                    {category.title}
-                  </p>
-                ))}
-              </div>
             </div>
           </section>
         </div>
       </section>
       <div className={'m-auto max-w-4xl py-8'}>
         <PortableText value={post.body} components={RichTextComponents} />
+      </div>
+      <div className="flex gap-3 text-center">
+        {post.categories.map((category: any) => (
+          <p key={category._id} className={'mt-4 text-sm font-semibold uppercase text-[#2563eb]'}>
+            {category.title}
+          </p>
+        ))}
       </div>
       <div className="mt-3 rounded-2xl bg-[#2d3038] px-5 py-5 text-gray-400">
         <div className="flex flex-wrap items-center justify-center sm:flex-nowrap sm:space-x-6">

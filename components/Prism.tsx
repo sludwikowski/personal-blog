@@ -17,7 +17,7 @@ type PrismProps = {
 const augmentLineProps = (lineNum: number, highlightedLines: number[]) => {
   const isHighlighted = highlightedLines.includes(Number(lineNum + 1))
   return {
-    className: isHighlighted ? '-mx-4 px-4 md:-mx-8 md:px-8 bg-blue-700' : undefined,
+    className: isHighlighted ? '-mx-4 px-4 md:-mx-8 md:px-8' : undefined,
   }
 }
 
@@ -45,9 +45,9 @@ export default function Prism(props: PrismProps) {
   }
 
   return (
-    <div className="relative items-center text-sm">
+    <div className="m-auto max-w-4xl overflow-x-auto py-8 text-sm">
       <button
-        className="absolute top-2 right-5 flex items-center gap-1 bg-blue-500 px-3 py-2 font-mono text-xs text-white transition-colors duration-500 ease-in-out hover:bg-blue-600 focus:bg-white focus:text-blue-500"
+        className="x-5 bg-brand-secondary/20 mt-7 mb-1 flex justify-center rounded-full py-2 text-sm text-blue-600 "
         onClick={handleCopy}
         ref={copyButtonRef}
       >
