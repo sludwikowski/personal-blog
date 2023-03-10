@@ -54,7 +54,6 @@ export const RichTextComponents = {
       </blockquote>
     ),
   },
-  code: {},
   marks: {
     strong: ({ children }: any) => <strong className={'font-bold text-[#2563eb]'}>{children}</strong>,
     link: ({ children, value }: any) => {

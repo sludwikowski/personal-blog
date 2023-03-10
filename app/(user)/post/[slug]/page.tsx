@@ -83,41 +83,42 @@ async function Post({ params: { slug } }: Props) {
             <div>
               <h2 className={'pt-12 text-center italic'}>{post.description}</h2>
             </div>
+            <div className="flex gap-3 text-center">
+              {post.categories.map((category: any) => (
+                <p key={category._id} className={'mt-4 text-sm font-semibold uppercase text-[#2563eb]'}>
+                  {category.title}
+                </p>
+              ))}
+            </div>
           </section>
         </div>
       </section>
       <div className={'m-auto max-w-4xl py-8'}>
         <PortableText value={post.body} components={RichTextComponents} />
-      </div>
-      <div className="flex gap-3 text-center">
-        {post.categories.map((category: any) => (
-          <p key={category._id} className={'mt-4 text-sm font-semibold uppercase text-[#2563eb]'}>
-            {category.title}
-          </p>
-        ))}
-      </div>
-      <div className="mt-3 rounded-2xl bg-[#2d3038] px-5 py-5 text-gray-400">
-        <div className="flex flex-wrap items-center justify-center sm:flex-nowrap sm:space-x-6">
-          <div className="relative mt-1 h-24 w-24 flex-shrink-0 ">
-            <Image
-              className={'rounded-full'}
-              src={urlFor(post.author.image).url()}
-              alt={post.author.name}
-              height={100}
-              width={100}
-            />
-          </div>
-          <div>
-            <div className="mb-3">
-              <h4 className="mt-2 text-lg font-medium text-gray-300"> About {post.author.name}</h4>
+        <div className="mt-3 rounded-2xl bg-[#2d3038] px-5 py-5 text-gray-400">
+          <div className="flex flex-wrap items-center justify-center sm:flex-nowrap sm:space-x-6">
+            <div className="relative mt-1 h-24 w-24 flex-shrink-0 ">
+              <Image
+                className={'rounded-full'}
+                src={urlFor(post.author.image).url()}
+                alt={post.author.name}
+                height={100}
+                width={100}
+              />
             </div>
-            <div className={''}>
-              {' '}
-              <PortableText value={post.author.bio} />
+            <div>
+              <div className="mb-3">
+                <h4 className="mt-2 text-lg font-medium text-gray-300"> About {post.author.name}</h4>
+              </div>
+              <div className={''}>
+                {' '}
+                <PortableText value={post.author.bio} />
+              </div>
             </div>
           </div>
         </div>
       </div>
+
       <div>
         <Link
           href={'/'}

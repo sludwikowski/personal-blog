@@ -5,122 +5,71 @@
 
 html {
   font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -ms-font-feature-settings: 'kern' 1;
+  font-feature-settings: 'kern';
 }
 
-.code-editor code[class*='language-'],
-.code-editor pre[class*='language-'] {
-  color: #d6deeb;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
+.button {
+  @apply inline-flex scale-100 cursor-pointer
+  items-center justify-center whitespace-nowrap
+  border-0 bg-blue-500
+  p-6 text-center font-mono text-base
+  leading-none text-white no-underline
+  transition-all duration-200;
 }
-.code-editor code[class*='language-'] ::-moz-selection,
-.code-editor code[class*='language-']::-moz-selection,
-.code-editor pre[class*='language-'] ::-moz-selection,
-.code-editor pre[class*='language-']::-moz-selection {
-  text-shadow: none;
-  background: rgba(29, 59, 83, 0.99);
+
+.button:hover {
+  @apply scale-105 bg-blue-600 text-white outline-none;
 }
-.code-editor code[class*='language-'] ::selection,
-.code-editor code[class*='language-']::selection,
-.code-editor pre[class*='language-'] ::selection,
-.code-editor pre[class*='language-']::selection {
-  text-shadow: none;
-  background: rgba(29, 59, 83, 0.99);
+
+.button:focus {
+  @apply scale-[1.025] bg-blue-700 text-blue-100 outline-none;
 }
-@media print {
-  .code-editor code[class*='language-'],
-  .code-editor pre[class*='language-'] {
-    text-shadow: none;
-  }
+
+.button[disabled] {
+  @apply pointer-events-none bg-blue-100 text-blue-200;
 }
-.code-editor pre[class*='language-'] {
-  padding: 1em;
-  margin: 0.5em 0;
+/* Code blocks */
+pre[class*='language-'] {
+  @apply -mx-4 p-4 text-xs leading-5;
+
   overflow: auto;
 }
-.code-editor :not(pre) > code[class*='language-'],
-.code-editor pre[class*='language-'] {
-  color: #fff;
-  background: #011627;
+
+@screen md {
+  pre[class*='language-'] {
+    @apply p-8 text-sm leading-6;
+  }
 }
-.code-editor :not(pre) > code[class*='language-'] {
-  padding: 0.1em;
-  border-radius: 0.3em;
-  white-space: normal;
+
+.prose [block-key] {
+  @apply relative;
 }
-.code-editor .token.cdata,
-.code-editor .token.comment,
-.code-editor .token.prolog {
-  color: #637777;
+
+.prose code {
+  @apply whitespace-nowrap rounded border border-blue-100 bg-blue-50 p-1 text-blue-500;
 }
-.code-editor .token.punctuation {
-  color: #c792ea;
+
+.dark .prose code {
+  @apply border-blue-800 bg-blue-800 p-1 text-blue-50;
 }
-.code-editor .namespace {
-  color: #b2ccd6;
+
+.prose code {
+  @apply text-sm;
 }
-.code-editor .token.deleted {
-  color: rgba(239, 83, 80, 0.56);
+
+.prose canvas {
+  @apply h-auto max-w-full;
 }
-.code-editor .token.property,
-.code-editor .token.symbol {
-  color: #80cbc4;
+
+.intro a {
+  @apply underline;
 }
-.code-editor .token.keyword,
-.code-editor .token.operator,
-.code-editor .token.tag {
-  color: #7fdbca;
-}
-.code-editor .token.boolean {
-  color: #ff5874;
-}
-.code-editor .token.number {
-  color: #f78c6c;
-}
-.code-editor .token.builtin,
-.code-editor .token.char,
-.code-editor .token.constant,
-.code-editor .token.function {
-  color: #82aaff;
-}
-.code-editor .token.doctype,
-.code-editor .token.selector {
-  color: #c792ea;
-}
-.code-editor .token.attr-name,
-.code-editor .token.inserted {
-  color: #addb67;
-}
-.code-editor .language-css .token.string,
-.code-editor .style .token.string,
-.code-editor .token.entity,
-.code-editor .token.string,
-.code-editor .token.url {
-  color: #addb67;
-}
-.code-editor .token.atrule,
-.code-editor .token.attr-value,
-.code-editor .token.class-name {
-  color: #ffcb8b;
-}
-.code-editor .token.important,
-.code-editor .token.regex,
-.code-editor .token.variable {
-  color: #d6deeb;
-}
-.code-editor .token.bold,
-.code-editor .token.important {
-  font-weight: 700;
+
+.intro a:hover {
+  @apply bg-white text-blue-500 no-underline;
 }

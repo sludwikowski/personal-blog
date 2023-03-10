@@ -1,8 +1,8 @@
 /* eslint-disable */
 'use client'
 import theme from 'prism-react-renderer/themes/nightOwl'
-
 import { ClipboardIcon } from '@heroicons/react/24/outline'
+
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import type { Language } from 'prism-react-renderer'
 import { useCallback, useRef, useState } from 'react'
@@ -45,9 +45,9 @@ export default function Prism(props: PrismProps) {
   }
 
   return (
-    <div className="m-auto max-w-4xl overflow-x-auto py-8 text-sm">
+    <div className="relative">
       <button
-        className="x-5 bg-brand-secondary/20 mt-7 mb-1 flex justify-center rounded-full py-2 text-sm text-blue-600 "
+        className="absolute top-1 -right-3 flex items-center gap-1 bg-blue-500 px-3 py-2 font-mono text-xs text-white transition-colors duration-500 ease-in-out hover:bg-blue-600 focus:bg-white focus:text-blue-500"
         onClick={handleCopy}
         ref={copyButtonRef}
       >

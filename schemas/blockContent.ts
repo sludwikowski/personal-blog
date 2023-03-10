@@ -35,13 +35,10 @@ export default defineType({
           title: 'Pre',
           value: 'pre',
           // @ts-ignore
-          blockEditor: { render: CodeRender },
         },
         {
           title: 'Code',
           value: 'code',
-          // @ts-ignore
-          blockEditor: { render: CodeRender },
         },
       ],
       lists: [
