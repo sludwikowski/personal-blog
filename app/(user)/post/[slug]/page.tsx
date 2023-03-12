@@ -63,6 +63,13 @@ async function Post({ params: { slug } }: Props) {
         <div className="grid-col-1 grid gap-6 pt-48 md:col-span-8 md:col-start-4 md:py-24 lg:col-span-8 lg:col-start-3">
           <h1 className="text-4xl font-black leading-none tracking-tighter text-blue-500 md:text-6xl">{post.title}</h1>
           <p className="max-w-xl font-mono leading-relaxed md:text-lg md:leading-loose">{post.description}</p>
+          <div className="flex gap-3 text-center">
+            {post.categories.map((category: any) => (
+              <p key={category._id} className={'mt-4 text-sm font-semibold uppercase text-[#2563eb]'}>
+                {category.title}
+              </p>
+            ))}
+          </div>
           <Link
             className="flex items-center gap-2 font-mono text-xs text-blue-500 hover:bg-blue-500 hover:text-white dark:text-blue-200 dark:hover:text-white"
             target="_blank"
