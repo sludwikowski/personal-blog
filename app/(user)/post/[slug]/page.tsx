@@ -89,6 +89,48 @@ async function Post({ params: { slug } }: Props) {
             {/*// @ts-ignore*/}
             <PortableText value={post.body} components={RichTextComponents} />
           </div>
+          <div className="mt-3 rounded-2xl bg-[#2d3038] px-5 py-5 text-gray-400">
+            <div className="flex flex-wrap items-center justify-center sm:flex-nowrap sm:space-x-6">
+              <div className="relative mt-1 h-24 w-24 flex-shrink-0 ">
+                <Image
+                  className={'rounded-full'}
+                  src={urlFor(post.author.image).url()}
+                  alt={post.author.name}
+                  height={100}
+                  width={100}
+                />
+              </div>
+              <div>
+                <div className="mb-3">
+                  <h4 className="mt-2 text-lg font-medium text-gray-300"> About {post.author.name}</h4>
+                </div>
+                <div className={''}>
+                  {' '}
+                  <PortableText value={post.author.bio} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <Link
+              href={'/'}
+              className={
+                'x-5 bg-brand-secondary/20 mt-7 mb-7 flex justify-center rounded-full py-2 text-sm text-blue-600 '
+              }
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="mr-2 h-6 w-6"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+              </svg>{' '}
+              <p className={'hover:underline'}> ...powrót</p>
+            </Link>
+          </div>
         </div>
       </div>
     </>

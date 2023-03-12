@@ -6,6 +6,7 @@ import urlFor from '@/lib/urlFor'
 import ClientSideRoute from '@/components/ClientSideRoute'
 
 import { Post } from '@/typings'
+import Footer from '@/components/Footer'
 
 type Props = { posts: Post[] }
 
@@ -65,6 +66,7 @@ function BlogList({ posts }: Props) {
           </ClientSideRoute>
         ))}
       </div>
+      <Footer />
     </div>
   )
 }
