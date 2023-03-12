@@ -79,3 +79,8 @@ interface Title {
   _type: 'string'
   current: string
 }
+
+export interface BlockItem {
+  value: Block
+  children: BlockChild[]
+}

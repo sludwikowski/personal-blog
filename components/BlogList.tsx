@@ -11,8 +11,7 @@ type Props = { posts: Post[] }
 
 function BlogList({ posts }: Props) {
   return (
-    <div>
-      <hr className={'mb-12 border-[#2563eb]'} />
+    <div className={'max-w-7xl'}>
       <div className={'grid grid-cols-1 gap-10 gap-y-16 px-10 pb-24 md:grid-cols-2'}>
         {posts.map((post) => (
           <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>

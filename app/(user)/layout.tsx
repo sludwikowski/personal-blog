@@ -2,17 +2,15 @@ import '../../styles/globals.css'
 
 import Head from '@/app/head'
 import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang={'en'}>
+    <html lang={'en'} className={'scroll-pt-20 overflow-auto scroll-smooth'}>
       <Head />
-      <body className="bg-[#17181C] text-white">
-        <div className="px-auto mx-auto flex min-h-screen max-w-7xl flex-col items-center py-2">
+      <body className="min-h-screen bg-[#17181C] text-white transition-colors duration-1000 ease-in-out">
+        <div className="flex min-h-screen flex-col items-center px-2 py-2">
           <Header />
           <main>{children}</main>
-          <Footer />
         </div>
       </body>
     </html>
