@@ -3,7 +3,7 @@ import type { Language } from 'prism-react-renderer'
 import React from 'react'
 import { z } from 'zod'
 
-import Prism from '../Prism'
+import Prism from './Prism'
 import { baseTypedObjectZ } from '@/types/block'
 
 export const typedObjectCodeZ = baseTypedObjectZ.extend({

@@ -12,7 +12,7 @@ export default function TableOfContents({ blocks }: { blocks: Block[] }) {
   return (
     <>
       <ul className="sticky top-12 grid grid-cols-1 gap-y-4 font-mono text-xs lg:pr-12">
-        <Label>Table of Contents</Label>
+        <Label>Spis treści:</Label>
         {headings.map((heading) => (
           <li
             key={heading._key}

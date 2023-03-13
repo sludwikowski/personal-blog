@@ -109,7 +109,7 @@ async function Post({ params: { slug } }: Props) {
               </div>
               <div>
                 <div className="mb-3">
-                  <h4 className="mt-2 text-lg font-medium text-gray-300"> About {post.author.name}</h4>
+                  <h4 className="mt-2 text-lg font-medium text-gray-300">{post.author.name}</h4>
                 </div>
                 <div className={''}>
                   {' '}

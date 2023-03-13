@@ -6,13 +6,13 @@ function Banner() {
     <div className="mt-20 flex w-full flex-1 flex-col items-center px-4 pt-8 text-center sm:mb-20 sm:pt-6">
       <h1 className="font-display mx-auto max-w-4xl text-5xl font-bold tracking-normal text-gray-300 sm:text-7xl">
         Cześć, ja jestem{' '}
-        <Link href="/">
+        <Link href="https://www.linkedin.com/in/sludwikowski/" target={'_blank'}>
           <span className="relative whitespace-nowrap text-blue-600">
             <span className="relative">Szymon</span>
           </span>
         </Link>
         , <br />a to jest:
-        <Link href="/">
+        <Link href="https://beta.reactjs.org/" target={'_blank'}>
           <span className={'relative whitespace-nowrap'}>
             <SquigglyLines />
             <strong className="relative text-blue-600"> roadToReact</strong>
