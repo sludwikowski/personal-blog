@@ -22,6 +22,21 @@ html {
   transition-all duration-200;
 }
 
+@screen md {
+  .text-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+  .banner-styles {
+    clip-path: polygon(8.33333% 18.16%, 33.3333% 18.16%, 33.3333% 81.84%, 8.33333% 81.84%);
+    opacity: 1;
+  }
+  .banner-styles-nd {
+    opacity: 1;
+    transform: translateX(16.6667%) scale(0.833333) translateZ(0px);
+  }
+}
+
 .button:hover {
   @apply scale-105 bg-blue-600 text-white outline-none;
 }

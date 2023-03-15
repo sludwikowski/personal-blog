@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import SquigglyLines from '@/components/SquigglyLines'
 
 export default function Header() {
   return (
@@ -8,7 +7,6 @@ export default function Header() {
       <Link href="/" className="mb-4 flex space-x-2 sm:mb-0">
         <Image alt="header text" src="/road.png" className="h-9 w-9 sm:h-8 sm:w-8" width={24} height={24} />
         <span className={'relative'}>
-          <SquigglyLines />
           <h1 className="ml-2 text-xl font-bold tracking-tight sm:text-3xl">roadToReact</h1>
         </span>
       </Link>

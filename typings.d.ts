@@ -1,6 +1,8 @@
 /* eslint-disable */
+import { SanityImageObjectStub } from '@sanity/asset-utils'
 import Author from '@/schemas/author'
 import { Slug } from 'sanity'
+import { MetaFields } from '@/types/meta-fields'
 
 type Base = {
   _createdAt: string
@@ -18,6 +20,7 @@ interface Post extends Base {
   slug: Slug
   title: string
   description: string
+  meta?: MetaFields
 }
 
 interface Author extends Base {

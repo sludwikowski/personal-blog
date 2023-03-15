@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { groq } from 'next-sanity'
 import Image from 'next/image'
+import type { Metadata } from 'next'
 
 import Link from 'next/link'
 
@@ -34,6 +35,29 @@ export async function generateStaticParams() {
   return slugRoutes.map((slug) => ({
     slug: slug,
   }))
+}
+
+export async function generateMetadata({ params: { slug } }: Props): Promise<Metadata> {
+  const siteMeta = groq`
+  *[_type == "post" && slug.current == $slug][0] {
+    ...,
+    author->,
+    categories[]->,
+  }
+  `
+  const post: Post = await client.fetch(siteMeta, { slug })
+  return {
+    title: post.title,
+    description: post.description,
+    authors: [{ name: post.author.name }],
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      type: 'article',
+      publishedTime: post._createdAt,
+      authors: [post.author.name],
+    },
+  }
 }
 
 async function Post({ params: { slug } }: Props) {
