@@ -14,7 +14,7 @@ import { Post } from '@/typings'
 import urlFor from '@/lib/urlFor'
 
 import { RichTextComponents } from '@/components/RichTextComponents'
-import { PencilSquareIcon } from '@heroicons/react/24/outline'
+import { PaperClipIcon } from '@heroicons/react/24/outline'
 
 import TableOfContents from '@/components/TableOfContents'
 
@@ -100,8 +100,8 @@ async function Post({ params: { slug } }: Props) {
             rel="noopener noreferrer"
             href={'https://github.com/sludwikowski'}
           >
-            <PencilSquareIcon className="w-5" />
-            Check my other projects
+            <PaperClipIcon className="w-5" />
+            Sprawdź również moje inne projekty :)
           </Link>
         </div>
         <div className="md:col-span-2 md:col-start-3 md:row-start-2 lg:col-span-3 lg:col-start-3">
