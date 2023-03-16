@@ -24,6 +24,7 @@ specifiers:
   '@types/styled-components': ^5.1.16
   '@typescript-eslint/eslint-plugin': ^5.48.0
   '@typescript-eslint/parser': ^5.48.0
+  '@vercel/analytics': ^0.1.11
   autoprefixer: ^10.4.13
   eslint: ^8.34.0
   eslint-config-prettier: ^8.6.0
@@ -58,7 +59,6 @@ specifiers:
   react-syntax-highlighter: ^15.5.0
   sanity: ^3.0.0
   sanity-plugin-iframe-pane: ^2.2.0
-  slugify: ^1.6.5
   styled-components: ^5.3.8
   stylelint: ^15.2.0
   stylelint-config-html: ^1.1.0
@@ -84,6 +84,7 @@ dependencies:
   '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.2.7
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.7
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
+  '@vercel/analytics': 0.1.11_react@18.2.0
   lodash.castarray: 4.4.0
   lodash.isplainobject: 4.0.6
   lodash.merge: 4.6.2
@@ -101,7 +102,6 @@ dependencies:
   react-simple-code-editor: 0.13.1_biqbaboplfbrettd7655fr4n2y
   sanity: 3.5.1_4b4yjg5ws2gg6dcar3nnejb2um
   sanity-plugin-iframe-pane: 2.2.0_fkgswoks434biap4pwyrkjurgq
-  slugify: 1.6.5
   styled-components: 5.3.8_biqbaboplfbrettd7655fr4n2y
   usehooks-ts: 2.9.1_biqbaboplfbrettd7655fr4n2y
   zod: 3.21.4
@@ -3402,6 +3402,14 @@ packages:
       - '@codemirror/autocomplete'
       - '@codemirror/language'
       - '@codemirror/search'
+    dev: false
+
+  /@vercel/analytics/0.1.11_react@18.2.0:
+    resolution: {integrity: sha512-mj5CPR02y0BRs1tN3oZcBNAX9a8NxsIUl9vElDPcqxnMfP0RbRc9fI9Ud7+QDg/1Izvt5uMumsr+6YsmVHcyuw==}
+    peerDependencies:
+      react: ^16.8||^17||^18
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@vitejs/plugin-react/3.1.0_vite@4.1.4:
@@ -8267,11 +8275,6 @@ packages:
       ansi-styles: 6.2.1
       is-fullwidth-code-point: 4.0.0
     dev: true
-
-  /slugify/1.6.5:
-    resolution: {integrity: sha512-8mo9bslnBO3tr5PEVFzMPIWwWnipGS0xVbYf65zxDqfNwmzYn1LpiKNrR6DlClusuvo+hDHd1zKpmfAe83NQSQ==}
-    engines: {node: '>=8.0.0'}
-    dev: false
 
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
