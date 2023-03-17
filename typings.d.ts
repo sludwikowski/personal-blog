@@ -87,3 +87,31 @@ export interface BlockItem {
   value: Block
   children: BlockChild[]
 }
+
+export type ExtendedImageAsset = SanityImageSource & {
+  _id: string
+  url?: string
+  asset: {
+    altText?: string
+    description?: string
+    metadata?: {
+      blurHash?: string
+    }
+  }
+}
+
+export interface ArticleDocument {
+  source: 'blog' | 'community'
+  _id: string
+  _updatedAt: string
+  slug: {
+    current: string
+  }
+  title?: string
+  summary: string
+  published: string
+  updated?: string
+  content: Block[]
+  image: ExtendedImageAsset
+  comments?: CommentDocument[]
+}

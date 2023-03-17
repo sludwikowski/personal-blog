@@ -4,7 +4,9 @@ import { client } from '@/lib/sanity.client'
 import PreviewSuspense from '@/components/PreviewSuspense'
 import PreviewBlogList from '@/components/PreviewBlogList'
 import BlogList from '@/components/BlogList'
+
 import Banner from '@/components/Banner'
+import Intro from '@/components/Intro'
 
 const query = groq`
   *[_type == 'post'] {
@@ -13,8 +15,7 @@ const query = groq`
   categories[]->
   } | order(_createdAt desc)
 `
-
-export const revalidate = 30
+export const revalidate = 10
 export default async function Home() {
   if (previewData()) {
     return (
@@ -30,10 +31,14 @@ export default async function Home() {
     )
   }
   const posts = await client.fetch(query)
+
   return (
-    <div>
-      <Banner />
-      <BlogList posts={posts} />
+    <div className="grid grid-cols-1 px-4 md:grid-cols-12 md:px-0 lg:grid-cols-16">
+      <main className="flex flex-col gap-y-12 pt-48 pb-12 md:col-span-6 md:col-start-6 md:gap-y-24 md:py-40 lg:col-span-8 lg:col-start-8">
+        <Banner />
+        <Intro />
+        <BlogList posts={posts} />
+      </main>
     </div>
   )
 }

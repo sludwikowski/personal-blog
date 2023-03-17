@@ -1,8 +1,8 @@
 import { Analytics } from '@vercel/analytics/react'
 
+import SocialLinks from '@/components/Header'
 import '../../styles/globals.css'
 
-import Header from '@/components/Header'
 export const metadata = {
   generator: 'Next.js',
   applicationName: 'roadToReact',
@@ -60,9 +60,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang={'en'} className={'scroll-pt-20 overflow-auto scroll-smooth'}>
       <body className="min-h-screen bg-[#17181C] text-white transition-colors duration-1000 ease-in-out">
-        <div className="flex min-h-screen flex-col items-center px-2 py-2">
-          <Header />
-          <main>{children}</main>
+        <div>
+          <main>
+            <SocialLinks />
+            <section>{children}</section>
+          </main>
         </div>
         <Analytics />
       </body>

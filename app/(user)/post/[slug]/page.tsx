@@ -1,21 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { groq } from 'next-sanity'
+import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
-
-import Link from 'next/link'
-
+import { groq } from 'next-sanity'
 import { PortableText } from '@portabletext/react'
 
 import { client } from '@/lib/sanity.client'
-
 import { Post } from '@/typings'
-
 import urlFor from '@/lib/urlFor'
 
 import { RichTextComponents } from '@/components/RichTextComponents'
 import { PaperClipIcon } from '@heroicons/react/24/outline'
-
 import TableOfContents from '@/components/TableOfContents'
 
 type Props = {
@@ -24,7 +19,7 @@ type Props = {
   }
 }
 
-export const revalidate = 30
+export const revalidate = 10
 export async function generateStaticParams() {
   const query = groq`*[_type=='post'] 
   { slug }`
@@ -72,7 +67,7 @@ async function Post({ params: { slug } }: Props) {
 
   return (
     <>
-      <div className={' absolute inset-0 mt-32 h-32 bg-blue-500 md:fixed md:right-auto md:mt-0 md:w-1/6'}>
+      <div className={' absolute inset-0 h-32 bg-blue-500 md:fixed md:right-auto md:mt-0 md:w-2/12'}>
         <div className={''}>
           <Image
             className={'absolute inset-0 block h-full object-cover md:min-h-screen '}
@@ -83,8 +78,8 @@ async function Post({ params: { slug } }: Props) {
           />
         </div>
       </div>
-      <div className="lg:grid-cols-16 grid grid-cols-1 gap-12 px-4 pb-32 md:mt-0 md:grid-cols-12 md:gap-0 md:px-32">
-        <div className="grid-col-1 grid gap-6 pt-48 md:col-span-8 md:col-start-4 md:py-24 lg:col-span-8 lg:col-start-3">
+      <div className="grid grid-cols-1 gap-12 px-4 pb-32 md:mt-0 md:grid-cols-12 md:gap-0 md:px-0 lg:grid-cols-16">
+        <div className="grid-col-1 grid gap-6 pt-48 md:col-span-8 md:col-start-3 md:py-24 lg:col-span-8 lg:col-start-5">
           <h1 className="text-4xl font-black leading-none tracking-tighter text-blue-500 md:text-6xl">{post.title}</h1>
           <p className="max-w-xl font-mono leading-relaxed md:text-lg md:leading-loose">{post.description}</p>
           <div className="flex gap-3 text-center">
@@ -104,10 +99,10 @@ async function Post({ params: { slug } }: Props) {
             Sprawdź również moje inne projekty :)
           </Link>
         </div>
-        <div className="md:col-span-2 md:col-start-3 md:row-start-2 lg:col-span-3 lg:col-start-3">
+        <div className="md:col-span-2 md:col-start-3 md:row-start-2 lg:col-span-3 lg:col-start-5">
           <TableOfContents blocks={post.body} />
         </div>
-        <div className="md:col-span-6 md:col-start-6 md:row-start-2 lg:col-span-7 lg:col-start-6">
+        <div className="md:col-span-6 md:col-start-6 md:row-start-2 lg:col-span-8 lg:col-start-8">
           <div className="mb-2">
             {new Date(post._createdAt).toLocaleDateString('pl-PL', {
               day: 'numeric',
@@ -119,28 +114,6 @@ async function Post({ params: { slug } }: Props) {
             {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
             {/*// @ts-ignore*/}
             <PortableText value={post.body} components={RichTextComponents} />
-          </div>
-          <div className="mt-3 rounded-2xl bg-[#2d3038] px-5 py-5 text-gray-400">
-            <div className="flex flex-wrap items-center justify-center sm:flex-nowrap sm:space-x-6">
-              <div className="relative mt-1 h-24 w-24 flex-shrink-0 ">
-                <Image
-                  className={'rounded-full'}
-                  src={urlFor(post.author.image).url()}
-                  alt={post.author.name}
-                  height={100}
-                  width={100}
-                />
-              </div>
-              <div>
-                <div className="mb-3">
-                  <h4 className="mt-2 text-lg font-medium text-gray-300">{post.author.name}</h4>
-                </div>
-                <div className={''}>
-                  {' '}
-                  <PortableText value={post.author.bio} />
-                </div>
-              </div>
-            </div>
           </div>
           <div>
             <Link

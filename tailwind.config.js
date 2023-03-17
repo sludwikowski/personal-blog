@@ -4,7 +4,14 @@
 module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        16: 'repeat(16, minmax(0, 1fr))',
+      },
+      gridColumn: {
+        'span-16': 'span 16 / span 16',
+      },
+    },
     typography: (theme) => ({
       DEFAULT: {
         css: {
@@ -48,22 +55,12 @@ module.exports = {
           },
         },
       },
-      dark: {
-        css: {
-          color: theme('colors.blue.50'),
-          a: { color: theme('colors.blue.100') },
-          strong: { color: theme('colors.blue.50') },
-          blockquote: {
-            color: theme('colors.blue.50'),
-            borderLeftColor: theme('colors.blue.500'),
-          },
-        },
-      },
     }),
   },
   plugins: [
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
+    require('tailwindcss-fraction-widths')([8, 16]),
   ],
 }

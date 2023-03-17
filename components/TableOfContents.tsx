@@ -1,5 +1,6 @@
 import type { Block } from '@/typings'
 import { scrollableKey } from '@/lib/scrollableId'
+
 import Label from './Label'
 
 export default function TableOfContents({ blocks }: { blocks: Block[] }) {

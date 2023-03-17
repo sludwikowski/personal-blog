@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,6 +11,10 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-font-feature-settings: 'kern' 1;
   font-feature-settings: 'kern';
+}
+
+a {
+  @apply transition-colors duration-200 ease-out;
 }
 
 .button {

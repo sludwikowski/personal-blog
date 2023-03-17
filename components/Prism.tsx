@@ -1,12 +1,13 @@
 /* eslint-disable */
 'use client'
-import theme from 'prism-react-renderer/themes/nightOwl'
-import { ClipboardIcon } from '@heroicons/react/24/outline'
+import { useCallback, useRef, useState } from 'react'
+import { useCopyToClipboard } from 'usehooks-ts'
 
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import type { Language } from 'prism-react-renderer'
-import { useCallback, useRef, useState } from 'react'
-import { useCopyToClipboard } from 'usehooks-ts'
+
+import theme from 'prism-react-renderer/themes/nightOwl'
+import { ClipboardIcon } from '@heroicons/react/24/outline'
 
 type PrismProps = {
   code: string

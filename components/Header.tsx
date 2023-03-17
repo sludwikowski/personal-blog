@@ -1,15 +1,33 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Header() {
+import GitHub from '@/components/GitHub'
+import Linkedin from '@/components/Linkedin'
+export const buttonClasses =
+  'flex items-center justify-center p-1 w-7 h-7 md:w-10 md:h-10 text-blue-500 rounded-full bg-white hover:bg-blue-900 hover:text-white'
+
+const Header = () => {
   return (
-    <header className="xs:flex-row mt-4 flex w-full max-w-7xl flex-col items-center gap-2 border-b border-gray-600 px-2 pb-5 sm:px-4">
-      <Link href="/" className="mb-4 flex space-x-2 sm:mb-0">
-        <Image alt="header text" src="/road.png" className="h-9 w-9 sm:h-8 sm:w-8" width={24} height={24} />
-        <span className={'relative'}>
-          <h1 className="ml-2 text-xl font-bold tracking-tight sm:text-3xl">roadToReact</h1>
-        </span>
-      </Link>
+    <header
+      className={
+        'fixed inset-0 bottom-auto z-30 flex items-center justify-center text-sm md:bottom-0 md:right-auto md:w-1/12 lg:w-1/16'
+      }
+    >
+      <div className="flex items-center justify-center border-l-2 border-r-2 border-blue-500 bg-blue-500 py-2 px-3 font-mono text-white md:w-full md:flex-col md:border-none md:py-8">
+        <Link href="/" className="text-vertical flex items-center justify-center hover:bg-blue-900">
+          roadToReact
+        </Link>
+        <div className="md:border-t-none mx-3 w-12 border-t border-white md:mx-0 md:my-4 md:h-16 md:w-auto md:border-l lg:h-24" />
+        <div className="flex space-x-3 md:flex-col md:space-x-0 md:space-y-3">
+          <Link href="https://www.linkedin.com/in/sludwikowski/" className={buttonClasses} aria-label="Linkedin">
+            <Linkedin className={'w-full'} />
+          </Link>
+          <Link href="https://github.com/sludwikowski" className={buttonClasses} aria-label="sludwikowski on GitHub">
+            <GitHub className={'w-full'} />
+          </Link>
+        </div>
+      </div>
     </header>
   )
 }
+
+export default Header
