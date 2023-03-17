@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c75abeec-214f-45ed-ae9e-bc28f4f54ab9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/LICENSE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="c75abeec-214f-45ed-ae9e-bc28f4f54ab9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +110,7 @@
       <workItem from="1679040657492" duration="5881000" />
       <workItem from="1679046858219" duration="1568000" />
       <workItem from="1679057880944" duration="3694000" />
-      <workItem from="1679086078985" duration="5860000" />
+      <workItem from="1679086078985" duration="6169000" />
     </task>
     <servers />
   </component>
