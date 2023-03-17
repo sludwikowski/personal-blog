@@ -1,4 +1,0 @@
-
-> personal-blog@0.1.0 lint /home/sludwikowski/Repositories/personal-blog
-> eslint app --ext .js,.jsx,.ts,.tsx
-

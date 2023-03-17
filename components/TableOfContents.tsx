@@ -22,7 +22,7 @@ export default function TableOfContents({ blocks }: { blocks: Block[] }) {
           >
             <a
               href={`#${scrollableKey(heading._key)}`}
-              className="block text-blue-500 hover:bg-blue-500 hover:text-white dark:text-blue-200 dark:hover:text-white"
+              className="block text-blue-500 hover:bg-blue-500 hover:text-white"
             >
               {heading.style === 'h3' ? `- ` : ``}
               {heading.children.map((child) => child.text).join('')}

@@ -90,7 +90,7 @@ async function Post({ params: { slug } }: Props) {
             ))}
           </div>
           <Link
-            className="flex items-center gap-2 font-mono text-xs text-blue-500 hover:bg-blue-500 hover:text-white dark:text-blue-200 dark:hover:text-white"
+            className="flex items-center gap-2 font-mono text-xs text-blue-500 hover:bg-blue-500 hover:text-white"
             target="_blank"
             rel="noopener noreferrer"
             href={'https://github.com/sludwikowski'}
@@ -110,7 +110,7 @@ async function Post({ params: { slug } }: Props) {
               year: 'numeric',
             })}
           </div>
-          <div className="md:prose-lg lg:prose-xl prose-blue dark:prose-invert prose marker:text-blue-500 prose-strong:font-bold">
+          <div className="md:prose-lg lg:prose-xl prose-blue marker:text-blue-500 prose-strong:font-bold">
             {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
             {/*// @ts-ignore*/}
             <PortableText value={post.body} components={RichTextComponents} />
