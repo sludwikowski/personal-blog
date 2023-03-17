@@ -21,7 +21,7 @@ progress, I committed to sharing updates on this project every Wednesday. Additi
 hope that the information I share could potentially assist those who are at a comparable
 stage of learning.
     <br />
-    <a href="https://github.com/sludwikowski/personal-bloge"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/sludwikowski/personal-blog"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://www.roadtoreact.pl/">View Demo</a>
