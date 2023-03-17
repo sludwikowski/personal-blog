@@ -155,7 +155,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@sludwikowski](https://www.linkedin.com/in/sludwikowski/) - sludwikowski.dev@gmail.com
+@sludwikowski - [@sludwikowski](https://www.linkedin.com/in/sludwikowski/) - sludwikowski.dev@gmail.com
 
 Project Link: [https://github.com/sludwikowski/personal-blog](https://github.com/sludwikowski/personal-blog)
 
