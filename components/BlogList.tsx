@@ -67,7 +67,7 @@ function BlogList({ posts }: Props) {
           <>
             <aside>
               <h2
-                className="bg-gradient-to-r from-gray-50 to-gray-200 bg-[length:0px_5px] bg-left-bottom bg-no-repeat text-3xl font-black tracking-tighter text-blue-500 transition-[background-size]
+                className="bg-gradient-to-r from-gray-600 to-gray-900 bg-[length:0px_5px] bg-left-bottom bg-no-repeat text-3xl font-black tracking-tighter text-blue-500 transition-[background-size]
                            duration-500
                            hover:bg-[length:100%_10px]
                            group-hover:bg-[length:100%_10px]
@@ -75,7 +75,7 @@ function BlogList({ posts }: Props) {
               >
                 {post.title}
               </h2>
-              <div className="flex items-center space-x-3 font-light italic text-gray-300">
+              <div className="flex items-center space-x-3 font-light italic text-gray-800">
                 <p className="text-sm">{post.author.name}</p>
                 <p className={'text-sm'}>
                   {new Date(post._createdAt).toLocaleDateString('pl-PL', {
@@ -86,7 +86,7 @@ function BlogList({ posts }: Props) {
                 </p>
               </div>
               <div className={'mt-5 flex-1'}>
-                <p className={'text-white line-clamp-3'}>{post.description}</p>
+                <p className={'text-black line-clamp-3'}>{post.description}</p>
               </div>
               <div className={'flex flex-row items-center gap-y-1 gap-x-2 md:flex-row'}>
                 {post.categories.map((category: any) => (

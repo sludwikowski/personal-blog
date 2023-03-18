@@ -67,7 +67,7 @@ async function Post({ params: { slug } }: Props) {
 
   return (
     <>
-      <div className={' absolute inset-0 h-32 bg-blue-500 md:fixed md:right-auto md:mt-0 md:w-2/12'}>
+      <div className={' absolute inset-0 h-32 bg-blue-500 text-black md:fixed md:right-auto md:mt-0 md:w-2/12'}>
         <div className={''}>
           <Image
             className={'absolute inset-0 block h-full object-cover md:min-h-screen '}

@@ -53,9 +53,7 @@ stage of learning.
 
 ## About The Project
 
-[![Road_To_React][product-screenshot]](/public/defaultOg.png)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+[![Road_To_React][product-screenshot]](/public/screen.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,6 +117,8 @@ This is an example of how to list things you need to use the software and how to
 
 - [x] Create a blog with Sanity
   - [x] Deployment
+  - [x] Change layout
+- [ ] Adding the theme toggle
 - [ ] Adding a comment section
 - [ ] Adding a contact page
 
@@ -176,7 +176,7 @@ Project Link: [https://github.com/sludwikowski/personal-blog](https://github.com
 [license-url]: https://github.com/sludwikowski/personal-blog/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/sludwikowski/
-[product-screenshot]: /public/defaultOg.png
+[product-screenshot]: /public/screen.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [TypeScript]: https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white

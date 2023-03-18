@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c75abeec-214f-45ed-ae9e-bc28f4f54ab9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(user)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(user)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Banner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Banner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/BlogList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/BlogList.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +40,11 @@
     "last_opened_file_path": "/home/sludwikowski/Repositories/personal-blog",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
+    "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.standard": "",
+    "node.js.selected.package.stylelint": "/home/sludwikowski/Repositories/personal-blog/node_modules/stylelint",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/home/sludwikowski/Repositories/personal-blog/node_modules/prettier",
@@ -112,7 +117,8 @@
       <workItem from="1679040657492" duration="5881000" />
       <workItem from="1679046858219" duration="1568000" />
       <workItem from="1679057880944" duration="3694000" />
-      <workItem from="1679086078985" duration="6536000" />
+      <workItem from="1679086078985" duration="6777000" />
+      <workItem from="1679096852660" duration="309000" />
     </task>
     <servers />
   </component>

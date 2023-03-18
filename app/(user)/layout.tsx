@@ -59,7 +59,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang={'en'} className={'scroll-pt-20 overflow-auto scroll-smooth'}>
-      <body className="min-h-screen bg-[#17181C] text-white transition-colors duration-1000 ease-in-out">
+      <body className="min-h-screen bg-[#f1f1f1] text-black transition-colors duration-1000 ease-in-out">
         <div>
           <main>
             <SocialLinks />
