@@ -15,7 +15,7 @@ function createCanonicalWithId(hash: string) {
 function BlockHeaderChildren({ children }: { children: React.ReactNode | string }) {
   return (
     <>
-      <span className="pointer-events-none absolute inset-0 flex items-center justify-end text-xl text-blue-500 opacity-0 transition-opacity duration-200 group-hover:opacity-100"></span>
+      <span className="pointer-events-none absolute inset-0 flex items-center justify-end text-xl font-bold text-blue-500 opacity-0 transition-opacity duration-200 group-hover:opacity-100"></span>
       {children}
     </>
   )
@@ -30,7 +30,7 @@ export default function BlockHeader(props: BlockItem) {
     value.style,
     {
       id,
-      className: `pr-10 text-2xl text-bold text-blue-500 relative group hover:cursor-pointer`,
+      className: `pr-10 text-3xl font-bold text-blue-500 relative group hover:cursor-pointer`,
     },
     BlockHeaderChildren({ children })
   )
