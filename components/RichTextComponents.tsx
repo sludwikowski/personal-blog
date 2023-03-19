@@ -31,7 +31,7 @@ export const RichTextComponents = {
       <div className={'my-auto max-w-md'}>
         <ol
           className={
-            'ml-10 list-outside list-decimal space-y-2 rounded-2xl py-5 italic text-gray-800 marker:font-bold marker:text-blue-500'
+            'list-outside list-decimal space-y-2 rounded-2xl py-5 italic text-gray-800 marker:font-bold marker:text-blue-500'
           }
         >
           {children}
@@ -41,7 +41,7 @@ export const RichTextComponents = {
   },
   block: {
     normal: ({ children }: any) => <div className={'mt-4 mb-1 max-w-4xl text-justify text-black'}>{children}</div>,
-    h1: ({ children }: any) => <h1 className={'py-5 text-5xl font-bold tracking-widest'}>{children}</h1>,
+    h1: ({ children }: any) => <h1 className={'py-5 text-5xl font-bold tracking-widest text-blue-500'}>{children}</h1>,
     h2: BlockHeader,
     h3: BlockHeader,
     h4: ({ children }: any) => <h4 className={'py-5 text-2xl font-bold'}>{children}</h4>,
