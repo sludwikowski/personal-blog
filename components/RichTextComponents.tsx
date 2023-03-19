@@ -20,7 +20,7 @@ export const RichTextComponents = {
   },
   list: {
     bullet: ({ children }: any) => (
-      <div className={'m-auto max-w-md'}>
+      <div className={'my-auto max-w-md'}>
         {' '}
         <ul className={'list-outside list-disc space-y-2 py-5 italic text-gray-800 marker:text-blue-500'}>
           {children}
@@ -31,7 +31,7 @@ export const RichTextComponents = {
       <div className={'my-auto max-w-md'}>
         <ol
           className={
-            'list-outside list-decimal space-y-2 rounded-2xl py-5 italic text-gray-800 marker:font-bold marker:text-blue-500'
+            'ml-10 list-outside list-decimal space-y-2 rounded-2xl py-5 italic text-gray-800 marker:font-bold marker:text-blue-500'
           }
         >
           {children}

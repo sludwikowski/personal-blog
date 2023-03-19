@@ -30,7 +30,7 @@ export default function BlockHeader(props: BlockItem) {
     value.style,
     {
       id,
-      className: `pr-10 text-5xl text-black text-blue-500 relative group hover:cursor-pointer`,
+      className: `pr-10 text-2xl text-bold text-blue-500 relative group hover:cursor-pointer`,
     },
     BlockHeaderChildren({ children })
   )
