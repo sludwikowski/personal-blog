@@ -51,18 +51,20 @@ function BlogList({ posts }: Props) {
               </>
             )}
           </div>
-          <div className={'group flex cursor-pointer flex-row'}>
-            <div className={'absolute inset-0 my-auto sm:fixed md:right-auto md:h-5/6 md:w-4/12 lg:w-5/16'}>
-              {index === 0 && (
-                <Image
-                  className={`${bannerConfigDesktop.className} absolute inset-0 h-full object-cover lg:ml-28`}
-                  src={urlFor(post.mainImage).url()}
-                  alt={post.author.name}
-                  width={1400}
-                  height={800}
-                />
-              )}
-            </div>
+          <div
+            className={
+              'pointer-events-none absolute inset-0 my-auto sm:fixed md:right-auto md:h-5/6 md:w-4/12 lg:w-5/16'
+            }
+          >
+            {index === 0 && (
+              <Image
+                className={`${bannerConfigDesktop.className} absolute inset-0 h-full object-cover lg:ml-28`}
+                src={urlFor(post.mainImage).url()}
+                alt={post.author.name}
+                width={1400}
+                height={800}
+              />
+            )}
           </div>
           <>
             <aside>
